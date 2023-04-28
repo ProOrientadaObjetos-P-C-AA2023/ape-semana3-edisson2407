@@ -12,7 +12,8 @@ package paqueteuno;
 public class Ejecutor {
     public static void main(String[] args) {
         // Crear un objeto de tipo FacturaTelefono
-        FacturaTelefono ft = new FacturaTelefono();
+        FacturaTelefono ft = new FacturaTelefono( );
+        FacturaTelefono ft2 = new FacturaTelefono("0962733227", 233.0, 0.30);
         // Valores de entrada
         String numeroTelefono = "098321321";
         double minutos = 230;
@@ -31,6 +32,7 @@ public class Ejecutor {
         // objeto.
         
         ft.calcularValorFactura();
+        ft2.calcularValorFactura();
         
         // Se hace uso de los métodos obtener para presentar en pantalla lo 
         // requerido
@@ -39,5 +41,8 @@ public class Ejecutor {
                 + "Valor a cancelar: %.2f\n", ft.obtenerNumeroTelefono(),
                 ft.obtenerMinutosMes(), ft.obtenerValorMinuto(),
                 ft.obtenerValorFactura());
+        
+        
+        System.out.print(ft2.toString());
     }
 }
